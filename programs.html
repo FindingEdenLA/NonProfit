@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programs | Finding Eden</title>
+  <meta name="description" content="Explore the envisioned Finding Eden programs: somatic movement, art therapy, nervous system regulation, community circles, and youth creative healing.">
+  <meta name="theme-color" content="#d7e0d7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://findingeden.info/programs.html">
+  <meta property="og:title" content="Programs | Finding Eden">
+  <meta property="og:description" content="Explore the envisioned Finding Eden programs: somatic movement, art therapy, nervous system regulation, community circles, and youth creative healing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://findingeden.info/programs.html">
+  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Finding Eden home">
+      <strong>Finding Eden</strong>
+      <span>Where wellness finds you</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Programs & workshops</span>
+      <h1>Sample experiences that reflect the heart of Finding Eden.</h1>
+      <p class="lead">The first Finding Eden events are designed to introduce the kinds of offerings this project hopes to make more accessible over time.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div class="card image-card"><img src="assets/images/programs-collage.jpg" alt="Finding Eden programs collage showing somatic movement, art therapy, regulation, and community circles"></div>
+      <div>
+        <span class="eyebrow">Featured categories</span>
+        <h2>Programs rooted in regulation, reflection, and creativity.</h2>
+        <p>These offerings can be hosted as stand-alone workshops, recurring classes, community circles, or stations within a larger launch event.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h3>Somatic Movement</h3>
+        <p>Trauma-informed movement, grounding sequences, gentle mobility, music-led release, and body-awareness exercises that help people reconnect with sensation and safety.</p>
+      </article>
+      <article class="card">
+        <h3>Art Therapy & Creative Healing</h3>
+        <p>Guided art-making, collage, journaling, expressive prompts, and creative processing for people who need a less verbal doorway into healing.</p>
+      </article>
+      <article class="card">
+        <h3>Nervous System Regulation</h3>
+        <p>Breathwork, calming tools, sensory reset practices, mindfulness, reflection stations, and practical exercises that help people come back into their bodies.</p>
+      </article>
+      <article class="card">
+        <h3>Community Circles</h3>
+        <p>Facilitated group conversations centered on storytelling, shared humanity, emotional honesty, and being witnessed without fixing or judgment.</p>
+      </article>
+      <article class="card">
+        <h3>Youth & Family Programs</h3>
+        <p>Future offerings designed to support teens, young adults, caregivers, and families through creative programs, mentorship, emotional literacy, and community resources.</p>
+      </article>
+      <article class="card">
+        <h3>Voices of Strength Storytelling</h3>
+        <p>Anonymous stories, reflections, journals, and podcast-inspired spaces that encourage vulnerability, expression, and healing through being heard.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Finding Eden</h3>
+      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
+      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="programs.html">Programs</a></p>
+      <p><a href="funders.html">Funders & Partners</a></p>
+      <p><a href="volunteer.html">Volunteer</a></p>
+      <p><a href="launch-event.html">Launch Event</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
+      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
+      <p><a href="volunteer.html">Join the founding community</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.querySelector('.site-header nav');
+  if(!toggle||!nav) return;
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 760){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 760){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body></html>

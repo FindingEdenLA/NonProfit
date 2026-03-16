@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impact | Finding Eden</title>
+  <meta name="description" content="Why community healing matters and the impact Finding Eden aims to create in Los Angeles.">
+  <meta name="theme-color" content="#d7e0d7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://findingeden.info/impact.html">
+  <meta property="og:title" content="Impact | Finding Eden">
+  <meta property="og:description" content="Why community healing matters and the impact Finding Eden aims to create in Los Angeles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://findingeden.info/impact.html">
+  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Finding Eden home">
+      <strong>Finding Eden</strong>
+      <span>Where wellness finds you</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Impact</span>
+      <h1>What Finding Eden is trying to shift.</h1>
+      <p class="lead">This work exists because so many people are trying to survive emotional pain, trauma, and isolation without enough spaces that feel accessible, creative, and human.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-3">
+      <article class="card"><div class="badge">The problem</div><h3>Isolation</h3><p>Many people are holding grief, trauma, shame, burnout, or depression in private while longing for safe community.</p></article>
+      <article class="card"><div class="badge">The gap</div><h3>Access</h3><p>Support can be too expensive, too clinical, or not the right fit for people who need softer and more creative pathways.</p></article>
+      <article class="card"><div class="badge">The response</div><h3>Belonging</h3><p>Finding Eden aims to create spaces where people can come as they are, be witnessed, and reconnect with themselves.</p></article>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container split">
+      <div class="card">
+        <h2>What this project hopes to create over time</h2>
+        <ul class="feature-list">
+          <li>Accessible pop-ups and recurring community workshops.</li>
+          <li>A stronger local network of facilitators, artists, and healing practitioners.</li>
+          <li>A future physical home base for movement, art, circles, and quiet support.</li>
+          <li>Real stories, reflections, and proof-of-impact that can support future grants.</li>
+        </ul>
+      </div>
+      <div class="card image-card"><img src="assets/images/impact-quote.jpg" alt="Finding Eden reflection quote image about universal pain and healing"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Finding Eden</h3>
+      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
+      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="programs.html">Programs</a></p>
+      <p><a href="funders.html">Funders & Partners</a></p>
+      <p><a href="volunteer.html">Volunteer</a></p>
+      <p><a href="launch-event.html">Launch Event</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
+      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
+      <p><a href="volunteer.html">Join the founding community</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.querySelector('.site-header nav');
+  if(!toggle||!nav) return;
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 760){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 760){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body></html>

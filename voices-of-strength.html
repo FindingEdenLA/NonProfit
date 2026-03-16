@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voices of Strength | Finding Eden</title>
+  <meta name="description" content="Voices of Strength is the Finding Eden storytelling and reflection space for honest, anonymous, healing-centered stories.">
+  <meta name="theme-color" content="#d7e0d7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://findingeden.info/voices-of-strength.html">
+  <meta property="og:title" content="Voices of Strength | Finding Eden">
+  <meta property="og:description" content="Voices of Strength is the Finding Eden storytelling and reflection space for honest, anonymous, healing-centered stories.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://findingeden.info/voices-of-strength.html">
+  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Finding Eden home">
+      <strong>Finding Eden</strong>
+      <span>Where wellness finds you</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Voices of Strength</span>
+      <h1>A storytelling space for people who need to be heard without performing.</h1>
+      <p class="lead">Voices of Strength invites honest reflection, anonymous submissions, journal-style storytelling, and healing-centered conversations that remind people they are not alone.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>What it includes</h2>
+        <ul class="feature-list">
+          <li>Anonymous or named story submissions.</li>
+          <li>Healing reflections and journal prompts.</li>
+          <li>Future voice-only podcast and community story archive.</li>
+          <li>A raw, compassionate tone that prioritizes truth over perfection.</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="share-your-story.html">Share your story</a>
+        </div>
+      </div>
+      <div class="card image-card"><img src="assets/images/vos-support-wave-crop.jpg" alt="Voices of Strength audio waveform graphic"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Finding Eden</h3>
+      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
+      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="programs.html">Programs</a></p>
+      <p><a href="funders.html">Funders & Partners</a></p>
+      <p><a href="volunteer.html">Volunteer</a></p>
+      <p><a href="launch-event.html">Launch Event</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
+      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
+      <p><a href="volunteer.html">Join the founding community</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.querySelector('.site-header nav');
+  if(!toggle||!nav) return;
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 760){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 760){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body></html>

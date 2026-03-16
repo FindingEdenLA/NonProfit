@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onboarding Form | Finding Eden</title>
+  <meta name="description" content="Volunteer and supporter onboarding form for the Finding Eden founding community.">
+  <meta name="theme-color" content="#d7e0d7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://findingeden.info/onboarding.html">
+  <meta property="og:title" content="Onboarding Form | Finding Eden">
+  <meta property="og:description" content="Volunteer and supporter onboarding form for the Finding Eden founding community.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://findingeden.info/onboarding.html">
+  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Finding Eden home">
+      <strong>Finding Eden</strong>
+      <span>Where wellness finds you</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Onboarding form</span>
+      <h1>Founding community onboarding.</h1>
+      <p class="lead">For volunteers, collaborators, and supporters who want to stay involved as Finding Eden grows.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <form action="https://formspree.io/f/mqedapga" method="POST" class="card">
+        <input type="hidden" name="_subject" value="Finding Eden Founding Community Onboarding">
+        <div class="grid grid-2">
+          <label>Full name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Phone<input type="text" name="phone"></label>
+          <label>City / neighborhood<input type="text" name="location"></label>
+        </div>
+        <label>How did you find Finding Eden?<input type="text" name="source"></label>
+        <label>What type of involvement interests you most?
+          <textarea name="interest" required placeholder="Volunteer, donor, facilitator, artist, sponsor, photographer, marketing support, etc."></textarea>
+        </label>
+        <label>Relevant experience or offerings
+          <textarea name="experience" placeholder="Share any healing work, event, creative, nonprofit, youth, or community experience you’d like us to know about."></textarea>
+        </label>
+        <div class="check-grid">
+          <label class="checkbox"><input type="checkbox" name="community_values" value="Trauma-informed care"> <span>I value trauma-informed care</span></label>
+          <label class="checkbox"><input type="checkbox" name="community_values" value="Honest communication"> <span>I value honest communication</span></label>
+          <label class="checkbox"><input type="checkbox" name="community_values" value="Creative healing"> <span>I value creative healing</span></label>
+          <label class="checkbox"><input type="checkbox" name="community_values" value="Community support"> <span>I value community support</span></label>
+        </div>
+        <label>Anything else you want to share?
+          <textarea name="notes"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Submit onboarding form</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Finding Eden</h3>
+      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
+      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="programs.html">Programs</a></p>
+      <p><a href="funders.html">Funders & Partners</a></p>
+      <p><a href="volunteer.html">Volunteer</a></p>
+      <p><a href="launch-event.html">Launch Event</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
+      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
+      <p><a href="volunteer.html">Join the founding community</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.querySelector('.site-header nav');
+  if(!toggle||!nav) return;
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 760){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 760){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Volunteer | Finding Eden</title>
+  <meta name="description" content="Join the founding Finding Eden volunteer community in Los Angeles.">
+  <meta name="theme-color" content="#d7e0d7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://findingeden.info/volunteer.html">
+  <meta property="og:title" content="Volunteer | Finding Eden">
+  <meta property="og:description" content="Join the founding Finding Eden volunteer community in Los Angeles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://findingeden.info/volunteer.html">
+  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Finding Eden home">
+      <strong>Finding Eden</strong>
+      <span>Where wellness finds you</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Volunteer</span>
+      <h1>Join the founding community.</h1>
+      <p class="lead">Finding Eden is actively gathering volunteers, facilitators, artists, and community-minded people who want to help build something meaningful from the ground up.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div class="card">
+        <h2>Volunteer roles</h2>
+        <ul class="feature-list">
+          <li>Event support, setup, breakdown, and guest welcome.</li>
+          <li>Trauma-informed facilitators and workshop guides.</li>
+          <li>Artists, musicians, movement teachers, and storytellers.</li>
+          <li>Marketing, outreach, photography, and documentation.</li>
+          <li>Community ambassadors and donation/support helpers.</li>
+        </ul>
+        <p class="notice">Volunteers will be contacted as launch planning develops and funding allows for additional paid support.</p>
+      </div>
+      <div class="card image-card"><img src="assets/images/volunteer-seed.jpg" alt="Finding Eden seedling visual representing early-stage community building"></div>
+    </div>
+  </section>
+
+  <section class="section-soft">
+    <div class="container">
+      <h2>Volunteer interest form</h2>
+      <form action="https://formspree.io/f/mqedapga" method="POST">
+        <input type="hidden" name="_subject" value="Finding Eden Volunteer Interest">
+        <label>Full name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone or Instagram (optional)<input type="text" name="contact"></label>
+        <label>City / neighborhood<input type="text" name="location"></label>
+        <label>How would you like to help?
+          <textarea name="interest" placeholder="Tell us about your skills, background, or the kind of support you’d like to offer." required></textarea>
+        </label>
+        <div class="check-grid">
+          <label class="checkbox"><input type="checkbox" name="roles" value="Event support"> <span>Event support</span></label>
+          <label class="checkbox"><input type="checkbox" name="roles" value="Facilitator"> <span>Facilitator / practitioner</span></label>
+          <label class="checkbox"><input type="checkbox" name="roles" value="Artist musician"> <span>Artist / musician</span></label>
+          <label class="checkbox"><input type="checkbox" name="roles" value="Marketing outreach"> <span>Marketing / outreach</span></label>
+        </div>
+        <label>Availability<input type="text" name="availability" placeholder="Weekends, evenings, monthly, flexible, etc."></label>
+        <button class="btn btn-primary" type="submit">Submit volunteer form</button>
+      </form>
+      <p class="notice">By submitting, you’re expressing interest in future volunteer opportunities and launch event planning.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Finding Eden</h3>
+      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
+      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="programs.html">Programs</a></p>
+      <p><a href="funders.html">Funders & Partners</a></p>
+      <p><a href="volunteer.html">Volunteer</a></p>
+      <p><a href="launch-event.html">Launch Event</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
+      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
+      <p><a href="volunteer.html">Join the founding community</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.querySelector('.site-header nav');
+  if(!toggle||!nav) return;
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 760){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 760){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body></html>

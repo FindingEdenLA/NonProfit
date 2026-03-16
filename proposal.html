@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposal Page | Finding Eden</title>
+  <meta name="description" content="A concise grant-friendly proposal overview for Finding Eden, including mission, need, programs, and support opportunities.">
+  <meta name="theme-color" content="#d7e0d7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://findingeden.info/proposal.html">
+  <meta property="og:title" content="Proposal Page | Finding Eden">
+  <meta property="og:description" content="A concise grant-friendly proposal overview for Finding Eden, including mission, need, programs, and support opportunities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://findingeden.info/proposal.html">
+  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand" aria-label="Finding Eden home">
+      <strong>Finding Eden</strong>
+      <span>Where wellness finds you</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Proposal overview</span>
+      <h1>A concise, funder-friendly overview of the Finding Eden vision.</h1>
+      <p class="lead">This page can be shared with potential partners, donors, or grant contacts as a quick snapshot of what Finding Eden is building and why it matters.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2>Project summary</h2>
+        <p>Finding Eden is a Los Angeles grassroots initiative building community spaces for healing, creativity, and connection through trauma-informed movement, art, storytelling, and collective support.</p>
+        <p>The near-term focus is launching community pop-up experiences and strengthening a founding volunteer and partner network. The long-term goal is a permanent home base where accessible healing programs can grow.</p>
+      </div>
+      <div class="card">
+        <h2>Need & relevance</h2>
+        <p>Too many people are trying to process trauma, depression, grief, and chronic stress in isolation. Finding Eden responds to this need by creating spaces that feel more human, relational, and creatively engaging.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sand">
+    <div class="container grid grid-3">
+      <article class="card"><h3>Phase 1</h3><p>Launch event, pop-up workshops, volunteer activation, and initial documentation.</p></article>
+      <article class="card"><h3>Phase 2</h3><p>Recurring programs, stronger community partnerships, and facilitator support.</p></article>
+      <article class="card"><h3>Phase 3</h3><p>Funding pathway toward a permanent center and sustainable staffing.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="container cta-band">
+      <h2>Support opportunities</h2>
+      <p>Funding, sponsorship, in-kind support, venue partnerships, media support, and aligned community collaboration are all welcome.</p>
+      <div class="btn-row">
+        <a class="btn btn-soft" href="funders.html">Funders page</a>
+        <a class="btn btn-soft" href="mailto:submit.vos@gmail.com?subject=Finding%20Eden%20Proposal%20Inquiry">Email about partnership</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Finding Eden</h3>
+      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
+      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="programs.html">Programs</a></p>
+      <p><a href="funders.html">Funders & Partners</a></p>
+      <p><a href="volunteer.html">Volunteer</a></p>
+      <p><a href="launch-event.html">Launch Event</a></p>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
+      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
+      <p><a href="volunteer.html">Join the founding community</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var nav=document.querySelector('.site-header nav');
+  if(!toggle||!nav) return;
+  toggle.setAttribute('aria-expanded','false');
+  toggle.addEventListener('click', function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      if(window.innerWidth <= 760){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 760){
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body></html>
