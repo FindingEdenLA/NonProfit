@@ -49,18 +49,3637 @@
 
 <!-- INTRO -->
 <section class="vos-journal-intro" aria-label="A Life That Feels Like Yours — Introduction">
-  <!-- KEEPING YOUR ORIGINAL INTRO EXACTLY -->
-  <!-- (trimmed here for space but YOU should paste your FULL intro exactly as you gave me above) -->
+  <style>
+    .vos-journal-intro{
+      background:#d7e0d7;
+      padding: 1.25rem;
+      width:100%;
+      box-sizing:border-box;
+    }
+    .vos-journal-intro .wrap{
+      max-width:780px;
+      margin:0 auto;
+      box-sizing:border-box;
+      color:#222;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .vos-journal-intro .card{
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 1rem 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .vos-journal-intro .kicker{
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin: 0 0 0.5rem;
+      text-align:center;
+    }
+    .vos-journal-intro h2{
+      font-family: "Georgia","Times New Roman",serif;
+      font-size: 1.25rem;
+      margin: 0 0 0.5rem;
+      text-align:center;
+      font-weight: 600;
+    }
+    .vos-journal-intro .sub{
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin: 0 0 0.85rem;
+      text-align:center;
+      opacity: 0.9;
+    }
+    .vos-journal-intro p{
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin: 0 0 0.75rem;
+    }
+    .vos-journal-intro .rules{
+      margin: 0.75rem 0 0;
+      padding-left: 1.1rem;
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+    .vos-journal-intro .rules li{ margin: 0.35rem 0; }
+    .vos-journal-intro .small{
+      margin-top: 0.85rem;
+      font-size: 0.78rem;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+    .vos-journal-intro .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 0.9rem;
+    }
+    .vos-journal-intro button{
+      appearance:none;
+      border: 1px solid rgba(0,0,0,0.14);
+      background: #fdfdfc;
+      border-radius: 10px;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.84rem;
+      cursor:pointer;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+    .vos-journal-intro button:hover{ transform: translateY(-1px); }
+    .vos-journal-intro button:active{ transform: translateY(0px); }
+  </style>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="kicker">write your story • private • trauma-informed</div>
+      <h2>Before you start</h2>
+
+      <p class="sub">
+        This isn’t a “pretty journal.” It’s a space to tell the truth — even if it’s messy.
+      </p>
+
+      <p>
+        You don’t have to start at the beginning. You can do one question and close your laptop.
+      </p>
+
+      <ul class="rules">
+        <li><strong>Nothing here gets sent anywhere.</strong></li>
+        <li><strong>Go vague if you need to.</strong></li>
+        <li><strong>Take care of yourself.</strong></li>
+        <li><strong>Honesty over performance.</strong></li>
+      </ul>
+
+      <div class="btnrow">
+        <button onclick="document.querySelector('.vos-journal.part-one')?.scrollIntoView({behavior:'smooth'})">
+          Start Part One
+        </button>
+        <button onclick="document.querySelector('.vos-journal.part-two')?.scrollIntoView({behavior:'smooth'})">
+          Jump to Part Two
+        </button>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- PART ONE -->
 <div class="vos-journal part-one">
-  <!-- ✅ PASTE YOUR FULL PART ONE CODE HERE EXACTLY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+  :root{
+
+    --bg:#d7e0d7;
+
+    --ink:#222;
+
+    --muted:rgba(34,34,34,.75);
+
+    --card:rgba(255,255,255,.86);
+
+    --card-strong:rgba(255,255,255,.95);
+
+    --line:rgba(0,0,0,.14);
+
+    --shadow:0 1px 3px rgba(0,0,0,0.08);
+
+    --radius:12px;
+
+  }
+
+  .fe-wrap, .fe-wrap *{ box-sizing:border-box; }
+
+  .fe-wrap{
+
+    width:100%;
+
+    margin:0;
+
+    background:var(--bg);
+
+    color:var(--ink);
+
+    padding: 1.25rem;
+
+    font-family:"PT Serif", serif;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+  }
+
+  .fe-shell{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+  }
+
+  .fe-kicker{
+
+    text-align:center;
+
+    font-size:.8rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--muted);
+
+    margin:0 0 .75rem;
+
+  }
+
+  .fe-title{
+
+    font-family:"EB Garamond", serif;
+
+    font-weight:500;
+
+    text-align:center;
+
+    margin:0 0 .35rem;
+
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+
+    line-height:1.05;
+
+  }
+
+  .fe-subtitle{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    margin:0 auto 1rem;
+
+    max-width: 60ch;
+
+    line-height:1.6;
+
+  }
+
+  .fe-card{
+
+    background:var(--card);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    padding: 1rem 1.05rem;
+
+  }
+
+  .fe-card h2{
+
+    font-family:"EB Garamond", serif;
+
+    font-weight:500;
+
+    margin:0 0 .5rem;
+
+    font-size: 1.45rem;
+
+  }
+
+  .fe-card p{
+
+    margin:0 0 .75rem;
+
+    line-height:1.75;
+
+  }
+
+  .fe-grid{
+
+    display:grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+
+  }
+
+  @media (min-width: 980px){
+
+    .fe-grid{ grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+  }
+
+</style>
+
+<div class="vos-journal part-one">
+
+ <style>
+
+   .vos-journal {
+
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+     background: #d7e0d7;
+
+     color: #222;
+
+     padding: 1.25rem;
+
+     max-width: 780px;
+
+     margin: 0 auto;
+
+     box-sizing: border-box;
+
+   }
+
+   .vos-header-main {
+
+     text-align: center;
+
+     margin-bottom: 1.25rem;
+
+   }
+
+   .vos-header-main h1 {
+
+     font-family: "Georgia", "Times New Roman", serif;
+
+     font-size: 1rem;
+
+     letter-spacing: 0.18em;
+
+     text-transform: uppercase;
+
+     margin: 0 0 0.25rem;
+
+   }
+
+   .vos-header-main h2 {
+
+     font-family: "Georgia", "Times New Roman", serif;
+
+     font-style: italic;
+
+     margin: 0.2rem 0;
+
+     font-size: 1.45rem;
+
+   }
+
+   .vos-header-main .subtitle {
+
+     font-size: 0.86rem;
+
+     margin: 0.2rem 0;
+
+   }
+
+   .vos-header-main .tagline {
+
+     font-size: 0.76rem;
+
+     letter-spacing: 0.12em;
+
+     text-transform: uppercase;
+
+     margin: 0.25rem 0 0;
+
+   }
+
+   .intro-note {
+
+     font-size: 0.82rem;
+
+     line-height: 1.5;
+
+     margin-bottom: 0.9rem;
+
+     background: rgba(255,255,255,0.8);
+
+     border-radius: 10px;
+
+     padding: 0.75rem 0.85rem;
+
+     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+
+   }
+
+   .section-header {
+
+     margin: 1.25rem 0 0.75rem;
+
+     padding-bottom: 0.35rem;
+
+     border-bottom: 1px solid rgba(0,0,0,0.14);
+
+   }
+
+   .section-header .section-label {
+
+     font-size: 0.7rem;
+
+     text-transform: uppercase;
+
+     letter-spacing: 0.18em;
+
+     opacity: 0.7;
+
+   }
+
+   .section-header h3 {
+
+     margin: 0.25rem 0 0.1rem;
+
+     font-family: "Georgia", "Times New Roman", serif;
+
+     font-size: 1.05rem;
+
+   }
+
+   .section-header .section-subtitle {
+
+     font-size: 0.85rem;
+
+     opacity: 0.9;
+
+   }
+
+   details.chapter {
+
+     margin: 0.5rem 0;
+
+     background: rgba(255,255,255,0.95);
+
+     border-radius: 10px;
+
+     padding: 0.55rem 0.8rem 0.7rem;
+
+     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+
+   }
+
+   summary.chapter-title {
+
+     list-style: none;
+
+     cursor: pointer;
+
+     display: flex;
+
+     justify-content: space-between;
+
+     align-items: center;
+
+     gap: 0.5rem;
+
+   }
+
+   summary.chapter-title::-webkit-details-marker {
+
+     display: none;
+
+   }
+
+   .chapter-title span.title {
+
+     font-weight: 600;
+
+     font-size: 0.94rem;
+
+   }
+
+   .chapter-title span.tag {
+
+     font-size: 0.7rem;
+
+     text-transform: uppercase;
+
+     letter-spacing: 0.12em;
+
+     opacity: 0.6;
+
+     white-space: nowrap;
+
+   }
+
+   .chapter-body {
+
+     margin-top: 0.5rem;
+
+     padding-top: 0.45rem;
+
+     border-top: 1px solid rgba(0,0,0,0.06);
+
+     font-size: 0.88rem;
+
+     line-height: 1.5;
+
+   }
+
+   .chapter-intro {
+
+     font-size: 0.9rem;
+
+     margin-bottom: 0.45rem;
+
+   }
+
+   .prompt-block {
+
+     margin: 0.35rem 0;
+
+   }
+
+   .prompt-label {
+
+     font-weight: 500;
+
+     margin-bottom: 0.15rem;
+
+   }
+
+   .prompt-hint {
+
+     font-size: 0.8rem;
+
+     opacity: 0.75;
+
+     margin-bottom: 0.15rem;
+
+   }
+
+   textarea.vos-input {
+
+     width: 100%;
+
+     min-height: 110px;
+
+     border-radius: 8px;
+
+     border: 1px solid rgba(0,0,0,0.14);
+
+     padding: 0.45rem 0.5rem;
+
+     font-family: inherit;
+
+     font-size: 0.86rem;
+
+     resize: vertical;
+
+     box-sizing: border-box;
+
+     background: #fdfdfc;
+
+   }
+
+   .chapter-footer {
+
+     margin-top: 0.5rem;
+
+     font-size: 0.78rem;
+
+     opacity: 0.8;
+
+   }
+
+   .nav-note {
+
+     margin-top: 1rem;
+
+     font-size: 0.82rem;
+
+     text-align: center;
+
+     opacity: 0.85;
+
+   }
+
+   @media (max-width: 600px) {
+
+     .vos-journal {
+
+       padding: 1rem;
+
+     }
+
+   }
+
+ </style>
+
+ <script>
+
+   (function() {
+
+     function loadField(el) {
+
+       var id = el.getAttribute('data-journal-id');
+
+       if (!id) return;
+
+       var stored = localStorage.getItem('vos_journal_' + id);
+
+       if (stored !== null) el.value = stored;
+
+     }
+
+     function saveField(el) {
+
+       var id = el.getAttribute('data-journal-id');
+
+       if (!id) return;
+
+       localStorage.setItem('vos_journal_' + id, el.value);
+
+     }
+
+     document.addEventListener('DOMContentLoaded', function() {
+
+       var fields = document.querySelectorAll('.vos-journal textarea.vos-input[data-journal-id]');
+
+       fields.forEach(function(el) {
+
+         loadField(el);
+
+         el.addEventListener('input', function() { saveField(el); });
+
+       });
+
+     });
+
+   })();
+
+ </script>
+
+ <!-- MAIN HEADER -->
+
+ <header class="vos-header-main">
+
+   <h1>VOICES OF STRENGTH</h1>
+
+   <h2>A Life That Feels Like Yours</h2>
+
+   <p class="subtitle">A trauma-informed digital journal for people who don’t usually journal</p>
+
+   <p class="tagline">Real · Raw · Human · Non-gimmicky</p>
+
+ </header>
+
+ <div class="intro-note">
+
+   This is your space. You don’t have to impress anyone here, justify anything, or start at the “right” place.
+
+   You can answer out of order, write a lot or a little, stop and come back. Everything you type on this device
+
+   stays on this device.
+
+ </div>
+
+ <!-- ========== SECTION ONE – Opening Your Story (Ch. 1–5) ========== -->
+
+ <div class="section-header">
+
+   <div class="section-label">Section One</div>
+
+   <h3>Opening Your Story</h3>
+
+   <p class="section-subtitle">
+
+     Arriving as you are, mapping your chapters, meeting the you who survived.
+
+   </p>
+
+ </div>
+
+ <!-- Chapter 1 -->
+
+ <details class="chapter" open>
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 1 — Opening Your Story</span>
+
+     <span class="tag">Section One</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       You don’t have to start at the beginning. You can start right here, with who you are today and what brought you to this moment.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If you had to describe “where you are” in your life right now, what would you say?</div>
+
+       <div class="prompt-hint">
+
+         Say it the way you’d say it to someone who actually gets you. No sugar-coating, no performance.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch1_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What made you curious (or desperate) enough to open this journal?</div>
+
+       <div class="prompt-hint">
+
+         Name the feeling, situation, person, breaking point, or quiet “I can’t keep doing it like this” that got you here.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch1_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What part of your story feels the heaviest to carry right now?</div>
+
+       <div class="prompt-hint">
+
+         You don’t have to explain everything yet. You can just name the chapter, the era, or the feeling.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch1_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: If this were the first page of your book, how would you begin?</div>
+
+       <div class="prompt-hint">
+
+         It can be a letter, a rant, a messy monologue, or a list. There is no wrong way to start.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch1_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You can stop here. You don’t have to clean it up or make it make sense. You showed up — that counts.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 2 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 2 — Mapping Your Timeline</span>
+
+     <span class="tag">Section One</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Before we zoom into specific moments, it can help to see the broad strokes of your life.
+
+       Think of this as sketching the table of contents for your story.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If you divided your life into “chapters,” what would you call them?</div>
+
+       <div class="prompt-hint">
+
+         You might group them by age, city, relationship, job, heartbreak, survival era, or anything that fits.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch2_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. Which chapter feels the most emotionally loaded for you right now?</div>
+
+       <div class="prompt-hint">
+
+         You don’t have to unpack it yet. Just name it and notice what happens in your body when you do.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch2_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Which chapter do you feel most proud of surviving?</div>
+
+       <div class="prompt-hint">
+
+         This might be a time other people didn’t fully understand, but you know what it cost you to get through it.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch2_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Tell the “plot” of your life so far like you’re explaining it to someone new.</div>
+
+       <div class="prompt-hint">
+
+         Keep it simple and imperfect. You can always circle back and add more later.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch2_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Your story is allowed to have many chapters. You are not any one of them.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 3 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 3 — Who You Were On the Outside</span>
+
+     <span class="tag">Section One</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Most of us learned how to be a certain version of ourselves so we could be accepted, stay safe, or stay out of trouble.
+
+       That “outside self” has a story too.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If someone from your past described you, what would they say you were like?</div>
+
+       <div class="prompt-hint">
+
+         Think about family, teachers, friends, partners, co-workers — how did you appear to them?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch3_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What roles did you play to keep the peace or belong?</div>
+
+       <div class="prompt-hint">
+
+         The responsible one, the funny one, the quiet one, the good girl/good kid, the rebel, the caretaker, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch3_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Where did you feel most “performative” — like you were acting more than being?</div>
+
+       <div class="prompt-hint">
+
+         Home, school, work, church, relationships, social media — or somewhere else?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch3_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Talk about a moment where you remember performing instead of being yourself.</div>
+
+       <div class="prompt-hint">
+
+         Describe what you did, what people saw, and what you were really feeling underneath.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch3_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Performance is not proof that you were fake. It’s proof that you were adapting.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 4 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 4 — Who You Were On the Inside</span>
+
+     <span class="tag">Section One</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       There’s often a gap between the version of us people see and the one that lives inside our head and body.
+
+       That inner version deserves to be known.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. When you think about your inner world growing up, what words come to mind?</div>
+
+       <div class="prompt-hint">
+
+         Lonely, terrified, hopeful, confused, numb, curious, angry, imaginative, invisible — use your own words.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch4_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What were you afraid to say out loud back then?</div>
+
+       <div class="prompt-hint">
+
+         Fears, questions, secrets, truths you swallowed to keep things “okay.”
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch4_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Who, if anyone, felt safe enough to see the real you?</div>
+
+       <div class="prompt-hint">
+
+         A person, a pet, a notebook, music, a place — or maybe no one yet.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch4_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Introduce your “inside self” as if you were introducing a character in a book.</div>
+
+       <div class="prompt-hint">
+
+         How did they think, feel, dream, cope? What did they wish someone would notice?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch4_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       The inside you was never “too much” or “not enough.” They were responding to what they lived.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 5 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 5 — The Moment You Knew Something Was Off</span>
+
+     <span class="tag">Section One</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Many people can point to a moment or season when they realized,
+
+       “This isn’t normal,” “This isn’t safe,” or “Something has to change.”
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. When you look back, what was the first time you remember thinking “This isn’t okay”?</div>
+
+       <div class="prompt-hint">
+
+         It could be a single event, a pattern, or just a feeling you couldn’t shake.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch5_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. How did you respond to that realization at the time?</div>
+
+       <div class="prompt-hint">
+
+         Did you push it down, tell someone, act out, shut down, leave, pray harder, blame yourself?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch5_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What story were you told (or did you tell yourself) about why things were that way?</div>
+
+       <div class="prompt-hint">
+
+         “This is just how family is.” “God wants this.” “I’m dramatic.” “This is love.” “This is my fault.” etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch5_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Speak directly to that past version of you who noticed something was off.</div>
+
+       <div class="prompt-hint">
+
+         What do you wish they could have known? What do you want to say to them now?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch5_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Realizing something is off is not betrayal. It’s the beginning of honesty.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- ========== SECTION TWO – Where It Started (Ch. 6–10) ========== -->
+
+ <div class="section-header">
+
+   <div class="section-label">Section Two</div>
+
+   <h3>Where It Started</h3>
+
+   <p class="section-subtitle">
+
+     Looking at the soil you grew from — family, culture, religion, unspoken rules — with honesty and compassion.
+
+   </p>
+
+ </div>
+
+ <!-- Chapter 6 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 6 — The Atmosphere You Grew Up In</span>
+
+     <span class="tag">Section Two</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Instead of only listing events, sometimes it helps to describe the “weather” of your childhood — what it felt like day to day.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If your childhood home had a weather forecast, what would it be?</div>
+
+       <div class="prompt-hint">
+
+         Calm, stormy, unpredictable, foggy, sunny-but-with-a-threat-of-thunder, frozen, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch6_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What were the unspoken rules in your home?</div>
+
+       <div class="prompt-hint">
+
+         Things like “We don’t talk about feelings,” “Don’t upset Dad,” “Keep the image perfect,” “Obey or else.”
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch6_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Where did you go (physically or mentally) when things felt too intense?</div>
+
+       <div class="prompt-hint">
+
+         A bedroom, a friend’s house, a book, TV, church, fantasy, dissociation, humor, food, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch6_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Describe a regular day from your childhood as if you’re walking through it.</div>
+
+       <div class="prompt-hint">
+
+         Notice sights, sounds, routines, what your body felt like moving through that day.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch6_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Describing the atmosphere is not about blaming. It’s about understanding what you adapted to.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 7 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 7 — Rules, Religion, and Expectations</span>
+
+     <span class="tag">Section Two</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Many of us grew up in systems — family, religious, cultural — that shaped how we saw ourselves, our bodies, and our choices.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What beliefs were you raised with about what makes someone “good” or “bad”?</div>
+
+       <div class="prompt-hint">
+
+         Think about gender roles, sexuality, obedience, success, purity, loyalty, appearance, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch7_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. How were you rewarded when you followed the rules? How were you punished when you didn’t?</div>
+
+       <div class="prompt-hint">
+
+         Praise, silence, affection, money, control, shame, physical punishment, religious guilt, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch7_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Which of those beliefs still live in your body, even if your mind doesn’t fully agree anymore?</div>
+
+       <div class="prompt-hint">
+
+         Notice where you still feel fear, guilt, shame, or “I’m doing something wrong” energy.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch7_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Talk to the younger you who was trying so hard to be “good enough” in that system.</div>
+
+       <div class="prompt-hint">
+
+         What did they never get to hear? What would you tell them now?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch7_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Questioning the rules you were given is not rebellion. It’s self-respect.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 8 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 8 — What Love Looked Like</span>
+
+     <span class="tag">Section Two</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Our first experiences of “love” often set the template for what we tolerate, chase, or feel drawn to later.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. Growing up, how did you know someone cared about you?</div>
+
+       <div class="prompt-hint">
+
+         Was it words, gifts, acts of service, control, checking your phone, jealousy, silence, sacrifice?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch8_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. How did love and fear show up together in your early relationships or family?</div>
+
+       <div class="prompt-hint">
+
+         Times when “love” also meant walking on eggshells, being small, or keeping secrets.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch8_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What did you learn you had to do to avoid losing love?</div>
+
+       <div class="prompt-hint">
+
+         Be perfect, be quiet, be grateful, give in, forgive quickly, never talk back, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch8_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Describe the “love story” your nervous system grew up on.</div>
+
+       <div class="prompt-hint">
+
+         Not the fairy tale — the real emotional pattern underneath.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch8_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Understanding what love looked like then helps explain what you’ve called love since — and what you deserve now.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 9 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 9 — First Wounds, First Defenses</span>
+
+     <span class="tag">Section Two</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       At some point, something hurt you in a way that changed how you trusted, spoke up, or showed yourself.
+
+       Your defenses were born for a reason.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What are some of the first moments you remember feeling deeply hurt, rejected, or unsafe?</div>
+
+       <div class="prompt-hint">
+
+         You can write in broad strokes or focus on one scene that stands out.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch9_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. After those moments, what changed in how you acted or related to people?</div>
+
+       <div class="prompt-hint">
+
+         Did you get quieter, louder, clingier, colder, more guarded, more reckless?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch9_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Which defense do you still notice in yourself today?</div>
+
+       <div class="prompt-hint">
+
+         Sarcasm, over-explaining, ghosting, people-pleasing, stonewalling, numbing, over-working, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch9_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Let one of your defenses speak. What would it say about why it showed up?</div>
+
+       <div class="prompt-hint">
+
+         You might write from the voice of your anger, shutdown, humor, or perfectionism.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch9_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Your defenses are not your flaws. They are your story, spoken in behavior.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 10 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 10 — Who You Had to Become</span>
+
+     <span class="tag">Section Two</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       To make it through, you became someone who could survive your environment.
+
+       That version of you deserves to be understood and honored.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If you had to give a name or title to the version of you who survived childhood, what would it be?</div>
+
+       <div class="prompt-hint">
+
+         “The Responsible One,” “The Ghost,” “The Fighter,” “The Healer,” “The Comedian,” etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch10_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What were this version’s strengths?</div>
+
+       <div class="prompt-hint">
+
+         Things they did well: reading the room, caring for others, enduring pain, finding tiny pockets of joy, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch10_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What did it cost them?</div>
+
+       <div class="prompt-hint">
+
+         Sleep, childhood, safety, freedom, authenticity, boundaries, self-respect, health.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch10_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Write a thank-you letter to the you who got you this far.</div>
+
+       <div class="prompt-hint">
+
+         You can also gently name what you’d like them to put down now so you can grow.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch10_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You did what you had to do to survive. Now you are allowed to become someone who can live.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- ========== SECTION THREE – The Years That Changed Everything (Ch. 11–15) ========== -->
+
+ <div class="section-header">
+
+   <div class="section-label">Section Three</div>
+
+   <h3>The Years That Changed Everything</h3>
+
+   <p class="section-subtitle">
+
+     Early adulthood, breakaways, breakdowns, and the experiences that reshaped who you thought you were.
+
+   </p>
+
+ </div>
+
+ <!-- Chapter 11 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 11 — Leaving What You Knew</span>
+
+     <span class="tag">Section Three</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       At some point, you stepped out — into a new city, relationship, job, or version of yourself.
+
+       Leaving is rarely clean or simple.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What do you consider your first big “leaving” moment?</div>
+
+       <div class="prompt-hint">
+
+         Moving out, ending a relationship, leaving a church, changing identities, cutting contact, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch11_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What were you running toward — and what were you running from?</div>
+
+       <div class="prompt-hint">
+
+         Freedom, love, safety, escape, reinvention, survival, or just “anything but this.”
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch11_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. How did your nervous system react to that change?</div>
+
+       <div class="prompt-hint">
+
+         Did you feel alive, terrified, numb, dissociated, hyper-aware, reckless, hopeful?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch11_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Tell the story of that leaving as if it were a chapter in your book.</div>
+
+       <div class="prompt-hint">
+
+         Focus on details: where you were, what you packed, who knew, how the air felt.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch11_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Leaving what hurt you doesn’t mean it stops living inside you. That’s why you’re here now.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 12 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 12 — The Relationships That Marked You</span>
+
+     <span class="tag">Section Three</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Some relationships feel like whole lifetimes. They can be loving, traumatic, or both.
+
+       Either way, they leave fingerprints on who we become.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. Which relationship (or situationship) feels like a “main character” chapter in your story?</div>
+
+       <div class="prompt-hint">
+
+         You can change names or write in broad strokes. This is for you.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch12_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What did that relationship wake up in you — good and bad?</div>
+
+       <div class="prompt-hint">
+
+         Dependency, hope, obsession, safety, panic, purpose, shame, longing, creativity, numbness.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch12_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Looking back, what red flags or body signals did you override?</div>
+
+       <div class="prompt-hint">
+
+         Tight chest, pit in your stomach, confusion, walking on eggshells, changing yourself to keep them.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch12_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: If you could speak to your past self in that relationship, what would you say — without shaming them?</div>
+
+       <div class="prompt-hint">
+
+         Include understanding, not just advice. They were doing the best they could with what they knew.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch12_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are allowed to honor what a relationship gave you and still tell the truth about how it harmed you.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 13 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 13 — A Decade That Felt Like a Lifetime</span>
+
+     <span class="tag">Section Three</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Some seasons are so full of trauma, chaos, or change that they feel like several lives packed into a few years.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. When you think about your 20s (or another intense stretch of years), what headline would you give that era?</div>
+
+       <div class="prompt-hint">
+
+         “Learning the Hard Way,” “Losing Myself,” “Survival Mode,” “Breaking Open,” etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch13_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What were the main themes or patterns repeating during that time?</div>
+
+       <div class="prompt-hint">
+
+         Same kind of partners, same kind of jobs, same kind of betrayals, same coping cycles.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch13_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What did those years take from you — and what did they give you?</div>
+
+       <div class="prompt-hint">
+
+         Think about identity, time, health, resilience, wisdom, empathy, boundaries, dreams.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch13_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Tell the story of that decade like a documentary voiceover.</div>
+
+       <div class="prompt-hint">
+
+         Zoom out. Describe you as if you’re watching yourself from the outside, with compassion.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch13_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Surviving “too much” in a short time doesn’t mean you were weak. It means you were human in impossible conditions.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 14 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 14 — What Your Body Remembered</span>
+
+     <span class="tag">Section Three</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Even when your mind tried to move on, your body kept score — through symptoms, shutdowns, or reactions that didn’t make sense at the time.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What were some of the ways your body started speaking up?</div>
+
+       <div class="prompt-hint">
+
+         Anxiety, chronic pain, insomnia, panic, numbness, hyper-vigilance, dissociation, depression, stomach issues, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch14_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. How did you explain those symptoms to yourself back then?</div>
+
+       <div class="prompt-hint">
+
+         “I’m just dramatic,” “I’m lazy,” “I’m broken,” “It’s just stress,” “It’s all in my head,” etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch14_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Looking back now, what do you think your body was trying to tell you?</div>
+
+       <div class="prompt-hint">
+
+         About safety, boundaries, grief, overwork, danger, loneliness, or trauma.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch14_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Speak to your body as if it were a person who has been trying to protect you.</div>
+
+       <div class="prompt-hint">
+
+         What would you say to it now? What do you want it to know going forward?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch14_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Your body was never your enemy. It was the part of you that refused to forget.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 15 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 15 — The Thread That Connects It All</span>
+
+     <span class="tag">Section Three</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       When you zoom out on your childhood, your 20s, and all the in-between chapters, a few core themes often show up again and again.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. When you step back from everything you’ve written so far, what repeating themes do you see?</div>
+
+       <div class="prompt-hint">
+
+         Abandonment, control, seeking safety, rescuing others, being unseen, being used, starting over, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch15_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What does this tell you about how hard you’ve been working just to stay here?</div>
+
+       <div class="prompt-hint">
+
+         Name the effort, the strength, the exhaustion, the creativity, the persistence it took.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch15_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What do you feel more compassion for, now that you’ve traced your story this far?</div>
+
+       <div class="prompt-hint">
+
+         Parts of you you used to judge, decisions you made, relationships you stayed in, things you tolerated.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch15_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: If this were the end of Part One of your book, how would you close it?</div>
+
+       <div class="prompt-hint">
+
+         You might write a short narrator-style reflection on what this “first act” of your life reveals.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p1_ch15_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are not just the pain that happened to you. You are the one who is able to see it, name it, and choose what comes next.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <div class="nav-note">
+
+   When you’re ready, you can continue into the next part of your story — not as a different person,
+
+   but as the same you with more language and compassion for what you’ve lived.
+
+ </div>
+
+</div>
+
+
 </div>
 
 <!-- PART TWO -->
 <div class="vos-journal part-two">
-  <!-- ✅ PASTE YOUR FULL PART TWO CODE HERE EXACTLY -->
+  <div class="vos-journal part-two">
+
+ <!-- OPTIONAL: if this lives on the same page as Part One, you can remove this <style> and <script>
+
+      block to reduce size. Keep it ONLY if this section is on a separate page. -->
+
+ <style>
+
+   .vos-journal {
+
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+     background: #d7e0d7;
+
+     color: #222;
+
+     padding: 1.25rem;
+
+     max-width: 780px;
+
+     margin: 0 auto;
+
+     box-sizing: border-box;
+
+   }
+
+   .section-header {
+
+     margin: 1.25rem 0 0.75rem;
+
+     padding-bottom: 0.35rem;
+
+     border-bottom: 1px solid rgba(0,0,0,0.14);
+
+   }
+
+   .section-header .section-label {
+
+     font-size: 0.7rem;
+
+     text-transform: uppercase;
+
+     letter-spacing: 0.18em;
+
+     opacity: 0.7;
+
+   }
+
+   .section-header h3 {
+
+     margin: 0.25rem 0 0.1rem;
+
+     font-family: "Georgia", "Times New Roman", serif;
+
+     font-size: 1.05rem;
+
+   }
+
+   .section-header .section-subtitle {
+
+     font-size: 0.85rem;
+
+     opacity: 0.9;
+
+   }
+
+   details.chapter {
+
+     margin: 0.5rem 0;
+
+     background: rgba(255,255,255,0.95);
+
+     border-radius: 10px;
+
+     padding: 0.55rem 0.8rem 0.7rem;
+
+     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+
+   }
+
+   summary.chapter-title {
+
+     list-style: none;
+
+     cursor: pointer;
+
+     display: flex;
+
+     justify-content: space-between;
+
+     align-items: center;
+
+     gap: 0.5rem;
+
+   }
+
+   summary.chapter-title::-webkit-details-marker {
+
+     display: none;
+
+   }
+
+   .chapter-title span.title {
+
+     font-weight: 600;
+
+     font-size: 0.94rem;
+
+   }
+
+   .chapter-title span.tag {
+
+     font-size: 0.7rem;
+
+     text-transform: uppercase;
+
+     letter-spacing: 0.12em;
+
+     opacity: 0.6;
+
+     white-space: nowrap;
+
+   }
+
+   .chapter-body {
+
+     margin-top: 0.5rem;
+
+     padding-top: 0.45rem;
+
+     border-top: 1px solid rgba(0,0,0,0.06);
+
+     font-size: 0.88rem;
+
+     line-height: 1.5;
+
+   }
+
+   .chapter-intro {
+
+     font-size: 0.9rem;
+
+     margin-bottom: 0.45rem;
+
+   }
+
+   .prompt-block {
+
+     margin: 0.35rem 0;
+
+   }
+
+   .prompt-label {
+
+     font-weight: 500;
+
+     margin-bottom: 0.15rem;
+
+   }
+
+   .prompt-hint {
+
+     font-size: 0.8rem;
+
+     opacity: 0.75;
+
+     margin-bottom: 0.15rem;
+
+   }
+
+   textarea.vos-input {
+
+     width: 100%;
+
+     min-height: 110px;
+
+     border-radius: 8px;
+
+     border: 1px solid rgba(0,0,0,0.14);
+
+     padding: 0.45rem 0.5rem;
+
+     font-family: inherit;
+
+     font-size: 0.86rem;
+
+     resize: vertical;
+
+     box-sizing: border-box;
+
+     background: #fdfdfc;
+
+   }
+
+   .chapter-footer {
+
+     margin-top: 0.5rem;
+
+     font-size: 0.78rem;
+
+     opacity: 0.8;
+
+   }
+
+   .nav-note {
+
+     margin-top: 1rem;
+
+     font-size: 0.82rem;
+
+     text-align: center;
+
+     opacity: 0.85;
+
+   }
+
+   @media (max-width: 600px) {
+
+     .vos-journal {
+
+       padding: 1rem;
+
+     }
+
+   }
+
+ </style>
+
+ <script>
+
+   (function() {
+
+     function loadField(el) {
+
+       var id = el.getAttribute('data-journal-id');
+
+       if (!id) return;
+
+       var stored = localStorage.getItem('vos_journal_' + id);
+
+       if (stored !== null) el.value = stored;
+
+     }
+
+     function saveField(el) {
+
+       var id = el.getAttribute('data-journal-id');
+
+       if (!id) return;
+
+       localStorage.setItem('vos_journal_' + id, el.value);
+
+     }
+
+     document.addEventListener('DOMContentLoaded', function() {
+
+       var fields = document.querySelectorAll('.vos-journal textarea.vos-input[data-journal-id]');
+
+       fields.forEach(function(el) {
+
+         loadField(el);
+
+         el.addEventListener('input', function() { saveField(el); });
+
+       });
+
+     });
+
+   })();
+
+ </script>
+
+ <!-- ========= SECTION FOUR – Unlearning Survival (Ch. 16–20) ========= -->
+
+ <div class="section-header">
+
+   <div class="section-label">Section Four</div>
+
+   <h3>Unlearning Survival</h3>
+
+   <p class="section-subtitle">
+
+     Looking at your patterns with compassion, not shame. Naming what kept you alive, and gently making room for what lets you live.
+
+   </p>
+
+ </div>
+
+ <!-- Chapter 16 -->
+
+ <details class="chapter" open>
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 16 — The Ways You Learned to Survive</span>
+
+     <span class="tag">Section Four</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Everyone develops ways of coping that make sense at the time. Some of them are beautiful. Some of them are messy.
+
+       All of them have a story behind them.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. When you look back, what are some of the main “survival strategies” you used?</div>
+
+       <div class="prompt-hint">
+
+         People-pleasing, disappearing, performing, overachieving, numbing, humor, fantasy, caretaking, anger, control, substances —
+
+         use your own language.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch16_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. Which of these strategies are you most tired of carrying?</div>
+
+       <div class="prompt-hint">
+
+         Name the one that feels the heaviest right now, even if you’re not ready to let it go yet.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch16_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. Which strategies still feel protective or comforting in some way?</div>
+
+       <div class="prompt-hint">
+
+         You don’t have to see them as “bad.” You can hold both: “this helped me” and “this now hurts me.”
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch16_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Talk to the part of you that learned to survive this way.</div>
+
+       <div class="prompt-hint">
+
+         You might start with, “I see you…” or “I remember why you did this…” and see what comes next.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch16_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You don’t have to rip away survival strategies. You can thank them and slowly make room for new ones.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 17 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 17 — Patterns in Conflict</span>
+
+     <span class="tag">Section Four</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Conflict has a way of revealing our oldest wounds and fastest defenses. The way you fight, freeze, flee, or fawn is not random.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. When things get tense, what do you usually do first?</div>
+
+       <div class="prompt-hint">
+
+         Shut down, over-explain, attack, apologize immediately, change the subject, fix, caretaking, leave, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch17_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. Where do you think you learned that response?</div>
+
+       <div class="prompt-hint">
+
+         Think about what you saw in childhood, past relationships, or survival seasons.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch17_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. How does this pattern protect you — and how does it hurt you or people you care about?</div>
+
+       <div class="prompt-hint">
+
+         Be honest and gentle. You’re naming impact, not shaming yourself.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch17_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Describe a recent conflict as if you’re analyzing a scene, not judging the characters.</div>
+
+       <div class="prompt-hint">
+
+         What did you do, what did they do, and what might each of you have been protecting?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch17_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Seeing your patterns in conflict is the first step toward choosing something different mid-argument or afterward.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 18 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 18 — The Cycles You Fall Back Into</span>
+
+     <span class="tag">Section Four</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Sometimes it feels like you keep ending up in the same story with different people or different cities.
+
+       That doesn’t mean you’re doomed. It means there’s a pattern asking to be seen.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What patterns do you see repeating in your life?</div>
+
+       <div class="prompt-hint">
+
+         Same kind of partners, friendships, jobs, financial struggles, burnout cycles, self-sabotage, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch18_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What is familiar about these situations — even if they’re painful?</div>
+
+       <div class="prompt-hint">
+
+         Familiar doesn’t always mean safe. It just feels known to your nervous system.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch18_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. If this pattern could speak, what would it say it’s trying to give you or protect you from?</div>
+
+       <div class="prompt-hint">
+
+         Validation, distraction, numbness, belonging, control, a sense of worth, proof of a belief.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch18_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Pick one cycle and write the “script” of how it usually goes from beginning to end.</div>
+
+       <div class="prompt-hint">
+
+         Then, if you have space, imagine one tiny place in that script where you could choose something different.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch18_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Your patterns make sense in context. You are learning to pause in the middle of the script and rewrite a line.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 19 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 19 — Shame, Blame, and Responsibility</span>
+
+     <span class="tag">Section Four</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Healing often means sorting through what was never your fault, what you’ve carried as shame,
+
+       and what is actually yours to take responsibility for now.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What are some things that happened to you that were never your fault, even if you blamed yourself?</div>
+
+       <div class="prompt-hint">
+
+         Include trauma, violence, neglect, manipulation, power imbalances, being a child in adult situations, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch19_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. Where have you hurt others from your own unhealed pain?</div>
+
+       <div class="prompt-hint">
+
+         Times you lashed out, ghosted, betrayed, lied, manipulated, or stayed silent when you wish you hadn’t.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch19_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What is the difference, for you, between blame and responsibility?</div>
+
+       <div class="prompt-hint">
+
+         Blame often comes with shame and stuckness. Responsibility can come with movement and repair.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch19_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Speak to yourself as both witness and participant in your story.</div>
+
+       <div class="prompt-hint">
+
+         Name what you were too young or too overwhelmed to choose, and what you are choosing differently now.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch19_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are allowed to release what was never yours and still hold yourself gently accountable for who you are becoming.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 20 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 20 — Making Amends (With Yourself and Others)</span>
+
+     <span class="tag">Section Four</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Sometimes repair looks like direct apology. Sometimes it looks like changed behavior, boundaries,
+
+       or simply not abandoning yourself again in the same way.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. Who comes to mind when you think about “I wish I had done better”?</div>
+
+       <div class="prompt-hint">
+
+         This might include yourself, younger you, partners, friends, kids, family — or people you hurt while surviving.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch20_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What would making amends realistically look like in one of these situations?</div>
+
+       <div class="prompt-hint">
+
+         A conversation, a letter, different choices, respecting their boundary, therapy, sobriety, staying away, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch20_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What do you need to forgive yourself for, without forgetting what you’ve learned?</div>
+
+       <div class="prompt-hint">
+
+         This is about releasing chronic self-punishment, not erasing accountability.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch20_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Write a private amends letter — to yourself or someone else — that you may never send.</div>
+
+       <div class="prompt-hint">
+
+         Let truth, accountability, and compassion all be in the same room.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch20_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are not your worst moment. You are the person who can tell the truth about it and choose what comes next.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- ========= SECTION FIVE – A Life That Feels Like Yours (Ch. 21–30) ========= -->
+
+ <div class="section-header">
+
+   <div class="section-label">Section Five</div>
+
+   <h3>A Life That Feels Like Yours</h3>
+
+   <p class="section-subtitle">
+
+     Integrating what you’ve survived into a life that fits your nervous system, your values, your body, and your actual heart.
+
+   </p>
+
+ </div>
+
+ <!-- Chapter 21 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 21 — Rewriting What Love Means</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       After everything you’ve lived through, love can feel tangled with fear, obligation, or performance.
+
+       This is where you start to define love on your own terms.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. Based on your story so far, what did love used to mean for you?</div>
+
+       <div class="prompt-hint">
+
+         Sacrifice, being chosen, being needed, drama, intensity, control, staying no matter what, rescuing, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch21_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What does safe, steady, respectful love look like to you now — if you let yourself imagine it?</div>
+
+       <div class="prompt-hint">
+
+         Be specific. How does it feel in your body? How do you talk, disagree, repair, rest together?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch21_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What parts of you still don’t fully believe you’re allowed to have that?</div>
+
+       <div class="prompt-hint">
+
+         Old beliefs, voices, religious conditioning, shame, or identities that say “that’s not for me.”
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch21_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Write a new working definition of love that includes you, too.</div>
+
+       <div class="prompt-hint">
+
+         Let it be imperfect and evolving. This can be a paragraph, a list, or a manifesto.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch21_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Love that requires you to abandon yourself is not love that fits the person you are becoming.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 22 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 22 — Boundaries That Honor You</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Boundaries are not punishments. They are the shape of the life and relationships your nervous system can actually handle.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. Where in your life do you feel consistently drained, anxious, or resentful?</div>
+
+       <div class="prompt-hint">
+
+         These are usually places asking for new or clearer boundaries.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch22_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What boundary would you set in one of those areas if guilt and fear weren’t running the show?</div>
+
+       <div class="prompt-hint">
+
+         You can write the boundary as a simple sentence you might say out loud.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch22_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What story do you tell yourself about what will happen if you set that boundary?</div>
+
+       <div class="prompt-hint">
+
+         Will people leave, be angry, call you selfish, stop loving you, or see the “real” you?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch22_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Imagine a future scene where you hold that boundary and survive it.</div>
+
+       <div class="prompt-hint">
+
+         Describe how you feel afterward. What support or self-soothing would you need?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch22_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Boundaries may disappoint some people, but they are how you stop abandoning yourself as a lifestyle.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 23 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 23 — A Life That Fits Your Nervous System</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       After chronic stress and trauma, “normal” might not work for you. You’re allowed to build a life that is actually livable for your body.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What parts of everyday life feel especially overwhelming, even when they seem “small” to other people?</div>
+
+       <div class="prompt-hint">
+
+         social plans, noise, emails, driving, clutter, money tasks, appointments, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch23_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. Where do you feel the most at ease, regulated, or like you can breathe?</div>
+
+       <div class="prompt-hint">
+
+         Places, routines, times of day, specific people, environments, or sensory experiences.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch23_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. If your nervous system designed your ideal day, what would it include more of — and less of?</div>
+
+       <div class="prompt-hint">
+
+         Think about movement, rest, screens, food, social contact, nature, stimulation, quiet.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch23_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Describe one small change you could make this month to live 5% more in alignment with what your body needs.</div>
+
+       <div class="prompt-hint">
+
+         Keep it tiny and realistic. Your nervous system notices small acts of loyalty.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch23_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are allowed to build a life that might look “smaller” to others but feels safe and spacious inside your own skin.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 24 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 24 — People Who See You</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Healing doesn’t mean doing everything alone. It often means choosing, very carefully, who gets a front-row seat to your life.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. Who in your life (past or present) has made you feel most seen and understood?</div>
+
+       <div class="prompt-hint">
+
+         Notice what they did differently — how they listened, how they held you, how they stayed.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch24_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. Who do you feel smaller, dumber, or more “too much” around?</div>
+
+       <div class="prompt-hint">
+
+         These relationships can quietly re-create old wounds in new clothes.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch24_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What qualities do you want in the people who are allowed closest to you going forward?</div>
+
+       <div class="prompt-hint">
+
+         Think about honesty, repair, curiosity, accountability, humor, shared values, trauma awareness, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch24_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Imagine a room filled with people who are good for your nervous system.</div>
+
+       <div class="prompt-hint">
+
+         Describe who they are, how it feels to be with them, and how you show up when you feel safe.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch24_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are allowed to be selective with access to you. Not everyone has earned the right to hear your story in real time.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 25 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 25 — Desire, Creativity, and What You Actually Want</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       When you’ve spent years in survival mode, desire can feel selfish, dangerous, or unreachable.
+
+       This chapter is about letting yourself want again.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If survival wasn’t your full-time job, what would you be curious about?</div>
+
+       <div class="prompt-hint">
+
+         Art, music, writing, movement, community, travel, learning, rest, different work, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch25_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What did younger you love doing before shame, exhaustion, or criticism got in the way?</div>
+
+       <div class="prompt-hint">
+
+         Even small things: doodling, dancing, reading, taking photos, making up stories, exploring.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch25_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What stories do you carry about why you’re “not allowed” to want more?</div>
+
+       <div class="prompt-hint">
+
+         “It’s too late,” “I’m damaged,” “I don’t have the money,” “People like me don’t get that,” etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch25_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Give yourself permission, on paper, to want what you want — without editing.</div>
+
+       <div class="prompt-hint">
+
+         You don’t have to know how you’ll get there. Just let the wanting exist.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch25_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Desire is not a betrayal of your healing. It is a sign that there is more to you than what you’ve survived.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 26 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 26 — Grieving the Life You Didn’t Get</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Healing isn’t just about getting better. It’s also about grieving what will never be — the childhood, timelines, and versions of life you deserved but didn’t have.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What are some things you wish you had gotten to experience that you didn’t?</div>
+
+       <div class="prompt-hint">
+
+         Safe parents, a stable home, a healthy first love, college, money, support, slowness, a different body, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch26_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. How do you usually deal with the grief of what you missed out on?</div>
+
+       <div class="prompt-hint">
+
+         Avoiding it, intellectualizing, joking, minimizing, overworking, collapsing, crying, talking about it, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch26_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. If grief was allowed to be fully valid in your life, what would you let yourself mourn?</div>
+
+       <div class="prompt-hint">
+
+         You can name moments, seasons, versions of you, relationships, possibilities, or dreams.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch26_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Let yourself grieve on the page without trying to fix it.</div>
+
+       <div class="prompt-hint">
+
+         You can write “I wish…” as many times as you need. There is no “too much” here.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch26_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Grieving what you didn’t get makes more room to fully receive what you build and choose now.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 27 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 27 — The You Who Exists Right Now</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       There is a version of you that exists beyond survival, beyond fantasy future, beyond what other people see.
+
+       This chapter is about meeting them in the present tense.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If you pause and notice yourself today, who are you right now — in a sentence or two?</div>
+
+       <div class="prompt-hint">
+
+         Not who you “should” be. Who you actually are: tender, exhausted, funny, stubborn, wise, scared, hopeful, all of it.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch27_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What are you proud of yourself for, even if no one else sees it?</div>
+
+       <div class="prompt-hint">
+
+         Tiny acts of courage, ways you keep going, things you’ve survived quietly, healing choices you’ve made.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch27_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What parts of you are still waiting for permission to exist fully?</div>
+
+       <div class="prompt-hint">
+
+         Your sensitivity, anger, sexuality, creativity, rest, weirdness, spiritual questions, boundaries.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch27_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Write a snapshot of “you today” as if you’re a character in a story that’s still unfolding.</div>
+
+       <div class="prompt-hint">
+
+         Include your contradictions, your softness, your mess, and your strength.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch27_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You do not have to wait until you are “healed enough” to belong to your own life.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 28 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 28 — Imagining Future Chapters</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Imagining a future can feel risky after so many disappointments. You are not manifesting anything by dreaming.
+
+       You are simply letting yourself believe that this story keeps going.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. If your life were a book, what would you hope the next chapter titles might be?</div>
+
+       <div class="prompt-hint">
+
+         “Learning to Rest,” “Safe Love,” “Returning to Myself,” “Soft mornings,” “Laughing Again,” etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch28_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. In five years, how do you hope your body feels in your own life?</div>
+
+       <div class="prompt-hint">
+
+         Not what you look like — how you feel waking up, going to sleep, moving through an average day.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch28_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What values do you want guiding your decisions from here forward?</div>
+
+       <div class="prompt-hint">
+
+         Things like honesty, kindness, slowness, integrity, curiosity, creativity, rest, courage, community.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch28_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Describe a future day that feels like “a life that fits you,” without making it perfect.</div>
+
+       <div class="prompt-hint">
+
+         Include small, ordinary moments that would feel like a miracle to past you.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch28_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       You are not promising anything to anyone by imagining. You are letting hope back into rooms where it was once banned.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 29 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 29 — When Old Patterns Come Back</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       Setbacks are part of healing, not proof that you’re failing.
+
+       Old patterns come back when you’re tired, scared, or stretched. This chapter is about staying kind when that happens.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What old patterns tend to show back up when you’re overwhelmed or lonely?</div>
+
+       <div class="prompt-hint">
+
+         Texting people who hurt you, overworking, freezing, self-harm urges, overspending, isolating, etc.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch29_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. How do you usually talk to yourself after you “slip” into an old behavior?</div>
+
+       <div class="prompt-hint">
+
+         Do you shame yourself, minimize it, ignore it, justify it, or gently notice it?
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch29_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What would a kinder, more honest response to a setback sound like?</div>
+
+       <div class="prompt-hint">
+
+         Write it as if you’re talking to a friend you love who made the same choice.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch29_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Free-write: Describe a recent moment you slipped back into an old pattern, and rewrite your inner commentary.</div>
+
+       <div class="prompt-hint">
+
+         Keep the accountability. Lose the cruelty.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch29_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       Healing is not about never falling. It’s about how you respond to yourself when you do.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <!-- Chapter 30 -->
+
+ <details class="chapter">
+
+   <summary class="chapter-title">
+
+     <span class="title">Chapter 30 — Closing This Chapter, Not Your Story</span>
+
+     <span class="tag">Section Five</span>
+
+   </summary>
+
+   <div class="chapter-body">
+
+     <div class="chapter-intro">
+
+       You’ve walked through your story in a way many people never do.
+
+       This closing chapter is not an ending. It’s a pause to honor who you’ve been, who you are, and who you’re becoming.
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">1. What feels different in you after moving through this journal — even if it’s subtle?</div>
+
+       <div class="prompt-hint">
+
+         More language, more compassion, more grief, more anger, more clarity, more softness, more questions.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch30_q1"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">2. What are three truths about you that this journal has reminded you of?</div>
+
+       <div class="prompt-hint">
+
+         Not affirmations you think you “should” say — truths that feel real in your body.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch30_q2"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">3. What do you want to carry forward from this process — and what are you ready to gently put down?</div>
+
+       <div class="prompt-hint">
+
+         Patterns, beliefs, roles, relationships, expectations, coping mechanisms, dreams, practices.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch30_q3"></textarea>
+
+     </div>
+
+     <div class="prompt-block">
+
+       <div class="prompt-label">Closing letter: Write a letter from your present self to your future self.</div>
+
+       <div class="prompt-hint">
+
+         You can include: what you hope they remember about this season, what you never want them to forget about their worth,
+
+         and how proud you are that they kept going.
+
+       </div>
+
+       <textarea class="vos-input" data-journal-id="p2_ch30_q4"></textarea>
+
+     </div>
+
+     <div class="chapter-footer">
+
+       This is not the end of your story. It’s one moment where you chose to sit with it, tell the truth, and stay on your own side.
+
+     </div>
+
+   </div>
+
+ </details>
+
+ <div class="nav-note">
+
+   Thank you for letting yourself be seen here — even if no one else ever reads a word of it.
+
+   You can return to these chapters as many times as you need. Your story is still unfolding.
+
+ </div>
+
+</div>
 </div>
 
 <!-- ================= JOURNAL END ================= -->
