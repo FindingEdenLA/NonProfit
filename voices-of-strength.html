@@ -1,113 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
   <title>Voices of Strength | Finding Eden</title>
-  <meta name="description" content="Voices of Strength is the Finding Eden storytelling and reflection space for honest, anonymous, healing-centered stories.">
-  <meta name="theme-color" content="#d7e0d7">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="canonical" href="https://findingeden.info/voices-of-strength.html">
-  <meta property="og:title" content="Voices of Strength | Finding Eden">
-  <meta property="og:description" content="Voices of Strength is the Finding Eden storytelling and reflection space for honest, anonymous, healing-centered stories.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://findingeden.info/voices-of-strength.html">
-  <meta property="og:image" content="https://findingeden.info/assets/images/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://findingeden.info/assets/images/og-image.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="index.html" class="brand" aria-label="Finding Eden home">
-      <strong>Finding Eden</strong>
-      <span>Where wellness finds you</span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
-    <nav id="site-nav" aria-label="Primary">
-      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="vision.html">Vision</a></li><li><a href="funders.html">Funders</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="launch-event.html">Launch Event</a></li><li><a href="voices-of-strength.html">Voices of Strength</a></li><li><a href="share-your-story.html">Journal</a></li><li><a class="btn btn-primary" href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></li></ul>
-    </nav>
-  </div>
-</header>
 
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">Voices of Strength</span>
-      <h1>A storytelling space for people who need to be heard without performing.</h1>
-      <p class="lead">Voices of Strength invites honest reflection, anonymous submissions, journal-style storytelling, and healing-centered conversations that remind people they are not alone.</p>
-    </div>
-  </section>
+  <!-- NAV -->
+  <header>
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="logo">Finding Eden</div>
 
-  <section>
-    <div class="container grid grid-2">
-      <div class="card">
-        <h2>What it includes</h2>
-        <ul class="feature-list">
-          <li>Anonymous or named story submissions.</li>
-          <li>Healing reflections and journal prompts.</li>
-          <li>Future voice-only podcast and community story archive.</li>
-          <li>A raw, compassionate tone that prioritizes truth over perfection.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="share-your-story.html">Share your story</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vision.html">Vision</a>
+          <a href="return-to-self.html">Event</a>
+          <a href="voices-of-strength.html">Stories</a>
+          <a href="resources.html">Resources</a>
+          <a href="share-your-story.html">Share</a>
+          <a href="get-involved.html" class="cta">Get Involved</a>
         </div>
       </div>
-      <div class="card image-card"><img src="assets/images/vos-support-wave-crop.jpg" alt="Voices of Strength audio waveform graphic"></div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.7)), url('assets/images/hero.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h1>Voices of Strength</h1>
+      <p class="tagline">Stories people don’t usually say out loud</p>
     </div>
   </section>
-</main>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Finding Eden</h3>
-      <p>Building community spaces for healing, creativity, and connection in Los Angeles.</p>
-      <p class="notice">Grassroots nonprofit visioning future programs in movement, art, storytelling, regulation, and community healing.</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <p><a href="programs.html">Programs</a></p>
-      <p><a href="funders.html">Funders & Partners</a></p>
-      <p><a href="volunteer.html">Volunteer</a></p>
-      <p><a href="launch-event.html">Launch Event</a></p>
-    </div>
-    <div>
-      <h4>Connect</h4>
-      <p><a href="mailto:submit.vos@gmail.com">submit.vos@gmail.com</a></p>
-      <p><a href="https://pay.findingeden.info/donate" target="_blank" rel="noopener">Donate</a></p>
-      <p><a href="volunteer.html">Join the founding community</a></p>
-    </div>
-  </div>
-</footer>
+  <!-- INTRO -->
+  <section class="container">
 
-<script>
-(function(){
-  var toggle=document.querySelector('.nav-toggle');
-  var nav=document.querySelector('.site-header nav');
-  if(!toggle||!nav) return;
-  toggle.setAttribute('aria-expanded','false');
-  toggle.addEventListener('click', function(){
-    var open=nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  nav.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', function(){
-      if(window.innerWidth <= 760){
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded','false');
-      }
-    });
-  });
-  window.addEventListener('resize', function(){
-    if(window.innerWidth > 760){
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-    }
-  });
-})();
-</script>
-</body></html>
+    <div class="card">
+      <p>
+        Most people are carrying something they don’t talk about.
+      </p>
+
+      <p>
+        Not because they don’t want to — but because they don’t feel safe enough to.
+      </p>
+
+      <p>
+        Voices of Strength exists to change that.
+      </p>
+
+      <p>
+        This is a space where people share their experiences anonymously — without judgment, without interruption, without being told how they should feel.
+      </p>
+
+      <p>
+        Just real stories. Real emotions. Real people.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- STORIES -->
+  <section class="container">
+
+    <div class="card">
+      <h2>Story #1</h2>
+      <p>
+        I don’t think anyone in my life actually knows how bad it got.
+      </p>
+      <p>
+        I kept showing up like everything was fine. I laughed. I made plans. I answered texts.
+      </p>
+      <p>
+        But every night, I felt like I was collapsing into myself.
+      </p>
+      <p>
+        I wasn’t okay. I just didn’t know how to say that without feeling like a burden.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Story #2</h2>
+      <p>
+        I stayed longer than I should have.
+      </p>
+      <p>
+        Not because I didn’t see the red flags — but because I kept hoping they would change.
+      </p>
+      <p>
+        I convinced myself that if I just loved harder, communicated better, or stayed patient enough… it would become what I needed.
+      </p>
+      <p>
+        It didn’t.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Story #3</h2>
+      <p>
+        I don’t even know who I am without survival mode.
+      </p>
+      <p>
+        Slowing down feels uncomfortable. Peace feels unfamiliar.
+      </p>
+      <p>
+        I spent so long reacting, coping, adapting…
+      </p>
+      <p>
+        I never learned how to just exist.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+
+    <div class="card" style="text-align:center;">
+      <h2>Share Your Story</h2>
+
+      <p>
+        If you’ve been holding something in, you don’t have to carry it alone here.
+      </p>
+
+      <a class="btn" href="share-your-story.html">Submit Anonymously</a>
+    </div>
+
+  </section>
+
+</body>
+</html>
